@@ -8,6 +8,17 @@
     --default-font: 18px 'Mulish', sans-serif;
 }
 
+body {
+    position: relative;
+}
+
+#design-element-01 {
+    position: absolute;
+    width: 5vw;
+    top: 160px;
+    left: -.5vw;
+}
+
 a {
     text-decoration: none;
 }
@@ -54,9 +65,52 @@ header {
 
 .nav-link {
     color: #1F1534;
+    opacity: 50%;
 }
 
 .nav-link.active {
     color: #000;
+    opacity: 100%;
     font-weight: bold;
+}
+
+#website-content {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.landing-img {
+    max-width: 40vw;
+}
+
+.landing-side {
+    max-width: 445px;
+}
+
+.landing-header {
+    font-weight: bold;
+    font-size: 48px;
+    margin-bottom: 25px;
+}
+
+.landing-text {
+    font-weight: lighter;
+    font-size: 21px;
+    color: #7D7987;
+    margin-bottom: 45px;
+}
+
+.landing-btn {
+    color: #fff;
+    background-color: #458FF6;
+    border-radius: 50px;
+    height: 60px;
+    width: 200px;
+    cursor: pointer;
 }
