@@ -19,6 +19,13 @@ body {
     left: -.5vw;
 }
 
+#design-element-02 {
+    position: absolute;
+    top: 0;
+    left: -100px;
+    z-index: -1;
+}
+
 a {
     text-decoration: none;
 }
@@ -83,6 +90,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 192px;
 }
 
 .landing-img {
@@ -113,4 +121,83 @@ header {
     height: 60px;
     width: 200px;
     cursor: pointer;
+}
+
+#grid-container {
+    position: relative;
+    margin-bottom: 220px;
+}
+
+#grid-container, #grid-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid-header {
+    max-width: 60%;
+}
+
+#grid-header h1 {
+    padding-bottom: 26px;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+#grid-header span {
+    height: 2px;
+    width: 56px;
+    border: 2px #000 solid;
+    margin-bottom: 33px;
+}
+
+#grid-header p {
+    color: #7D7987;
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+#grid-content {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    gap: 30px 37px;
+}
+
+.grid-contents {
+    height: 354px;
+    width: 350px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.grid-contents img {
+    margin-bottom: 22px;
+}
+
+.grid-contents h3 {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.grid-contents p {
+    color: #7D7987;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+#grid-btn {
+    border: 2px #458FF6 solid;
+    padding: 15px 60px;
+    border-radius: 55px;
+}
+
+#grid-btn:hover{
+    opacity: 0.8;
+    transition: ease-in-out 0.2s;
 }
