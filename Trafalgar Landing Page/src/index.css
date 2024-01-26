@@ -26,6 +26,13 @@ body {
     z-index: -1;
 }
 
+#design-element-03 {
+    position: absolute;
+    width: 5vw;
+    top: -180px;
+    right: -120px;
+}
+
 a {
     text-decoration: none;
 }
@@ -125,7 +132,7 @@ header {
 
 #grid-container {
     position: relative;
-    margin-bottom: 220px;
+    margin-bottom: 80px;
 }
 
 #grid-container, #grid-header {
@@ -191,13 +198,69 @@ header {
     font-size: 16px;
 }
 
-#grid-btn {
+.site-btn {
     border: 2px #458FF6 solid;
+    color: #458FF6;
     padding: 15px 60px;
     border-radius: 55px;
 }
 
-#grid-btn:hover{
-    opacity: 0.8;
+.site-btn:hover{
+    opacity: 0.7;
     transition: ease-in-out 0.2s;
+}
+
+.promotional {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 160px;
+    width: 90%;
+}
+
+.promotional img {
+    max-width: 40vw;
+}
+
+.promotional-content {
+    max-width: 445px;
+}
+
+#promotional-02 {
+    flex-direction: row-reverse;
+    position: relative;
+}
+
+#promotional-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.divider {
+    height: 1px;
+    display: block;
+    width: 56px;
+    border-top: 2px solid #000;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.promotional-content h3 {
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.promotional-content p {
+    font-size: 18px;
+    font-weight: lighter;
+    color: #7D7987;
+    margin-bottom: 40px;
+}
+
+.dl-btn span {
+    position: relative;
+    margin-left: 5px;
+    top: 2px;
 }
