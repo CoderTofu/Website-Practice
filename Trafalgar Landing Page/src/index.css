@@ -89,6 +89,10 @@ header {
 }
 
 #website-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-left: 50px;
     margin-right: 50px;
 }
@@ -169,6 +173,7 @@ header {
 
 #grid-content {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     max-width: 80%;
     gap: 30px 37px;
@@ -263,4 +268,74 @@ header {
     position: relative;
     margin-left: 5px;
     top: 2px;
+}
+
+/* Testimonials */
+
+#testimonial-container {
+    height: 425px;
+    width: 1120px;
+    max-width: 80%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(208deg, #67C3F3 9.05%, #5A98F2 76.74%);
+}
+
+#testimonial-header {
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#testimonial-container span {
+    border-color: #fff;
+}
+
+#testimonial {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.customer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%; /* Adjust width as needed */
+    height: 100%; /* Adjust width as needed */
+    box-sizing: border-box;
+}
+
+.customer-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customer-profile img {
+    margin-right: 30px;
+}
+
+.customer-profile h4, .customer-profile h5 {
+    color: #fff;
+}
+
+.customer-profile h4 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.customer-profile h5 {
+    font-size: 18px;
+}
+
+.customer-review {
+    /* width: 80vw; */
+    display: flex;
+    max-width: 100%;
+    white-space: normal; /* Allow wrapping */
 }
