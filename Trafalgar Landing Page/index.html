@@ -145,60 +145,63 @@
         <div id="testimonial-container"> 
             <h3 id="testimonial-header">What our customer are saying</h3>
             <span class="divider"></span>
-            <div id="testimonial">
-                <!-- Customer 1 -->
-                <div class="customer">
-                    <div class="customer-profile">
-                        <img src="./src/images/img-10.png" alt="Person 1">
-                        <div class="customer-info">
-                            <h4>Edward Newgate</h4>
-                            <h5>Founder Circle</h5>
+            <div id="testimonial-slider">
+                <div id="testimonial">
+                    <!-- Customer 1 -->
+                    <div class="customer">
+                        <div class="customer-profile">
+                            <img src="./src/images/img-10.png" alt="Person 1">
+                            <div class="customer-info">
+                                <h4>Edward Newgate</h4>
+                                <h5>Founder Circle</h5>
+                            </div>
+                        </div>
+                        <div class="customer-review">
+                            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, expedita laborum! Eligendi, voluptatem fugiat! Laborum labore vero similique dignissimos quasi ratione asperiores expedita autem, accusantium numquam, eaque, optio dolore atque?"</p>
                         </div>
                     </div>
-                    <div class="customer-review">
-                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, expedita laborum! Eligendi, voluptatem fugiat! Laborum labore vero similique dignissimos quasi ratione asperiores expedita autem, accusantium numquam, eaque, optio dolore atque?"</p>
-                    </div>
-                </div>
-                <!-- Customer 2 -->
-                <div class="customer">
-                    <div class="customer-profile">
-                        <img src="./src/images/img-10.png" alt="Person 1">
-                        <div class="customer-info">
-                            <h4>Elizabeth II</h4>
-                            <h5>Queen of England</h5>
+                    <!-- Customer 2 -->
+                    <div class="customer">
+                        <div class="customer-profile">
+                            <img src="./src/images/img-10.png" alt="Person 1">
+                            <div class="customer-info">
+                                <h4>Elizabeth II</h4>
+                                <h5>Queen of England</h5>
+                            </div>
+                        </div>
+                        <div class="customer-review">
+                            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Error minus omnis quis similique minima culpa cupiditate, consectetur totam voluptatem? Dolorem exercitationem repellendus voluptas vitae, voluptatum quaerat. Quidem tenetur distinctio saepe!"</p>
                         </div>
                     </div>
-                    <div class="customer-review">
-                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Error minus omnis quis similique minima culpa cupiditate, consectetur totam voluptatem? Dolorem exercitationem repellendus voluptas vitae, voluptatum quaerat. Quidem tenetur distinctio saepe!"</p>
-                    </div>
-                </div>
-                <!-- Customer 3 -->
-                <div class="customer">
-                    <div class="customer-profile">
-                        <img src="./src/images/img-10.png" alt="Person 1">
-                        <div class="customer-info">
-                            <h4>Monkey D Luffy</h4>
-                            <h5>Future Pirate King</h5>
+                    <!-- Customer 3 -->
+                    <div class="customer">
+                        <div class="customer-profile">
+                            <img src="./src/images/img-10.png" alt="Person 1">
+                            <div class="customer-info">
+                                <h4>Monkey D Luffy</h4>
+                                <h5>Future Pirate King</h5>
+                            </div>
+                        </div>
+                        <div class="customer-review">
+                            <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, nesciunt aliquid. Unde ut nobis labore accusantium blanditiis dolore quibusdam et! Recusandae atque necessitatibus minima eum doloribus nesciunt dignissimos dolorum eveniet."</p>
                         </div>
                     </div>
-                    <div class="customer-review">
-                        <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, nesciunt aliquid. Unde ut nobis labore accusantium blanditiis dolore quibusdam et! Recusandae atque necessitatibus minima eum doloribus nesciunt dignissimos dolorum eveniet."</p>
-                    </div>
-                </div>
-                <!-- Customer 4 -->
-                <div class="customer">
-                    <div class="customer-profile">
-                        <img src="./src/images/img-10.png" alt="Person 1">
-                        <div class="customer-info">
-                            <h4>Alexander the Great</h4>
-                            <h5>Former King of Macedonia</h5>
+                    <!-- Customer 4 -->
+                    <div class="customer">
+                        <div class="customer-profile">
+                            <img src="./src/images/img-10.png" alt="Person 1">
+                            <div class="customer-info">
+                                <h4>Alexander the Great</h4>
+                                <h5>Former King of Macedonia</h5>
+                            </div>
                         </div>
-                    </div>
-                    <div class="customer-review">
-                        <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit expedita, voluptas officiis dignissimos incidunt et ducimus quae fugiat dolore nesciunt. Ex in iure non dignissimos at consequatur nihil maiores unde?"</p>
+                        <div class="customer-review">
+                            <p>"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit expedita, voluptas officiis dignissimos incidunt et ducimus quae fugiat dolore nesciunt. Ex in iure non dignissimos at consequatur nihil maiores unde?"</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            
             
         </div>
         <div id="testimonial-controls">
@@ -212,4 +215,27 @@
     </div>
 
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const testimonialContainer = document.getElementById('testimonial');
+        const customers = document.querySelectorAll('.customer');
+        const customerWidth = customers[0].clientWidth; // Assuming all customers have the same width
+        let currentIndex = 0;
+
+        function slideTo(index) {
+            const newPosition = -index * customerWidth;
+            testimonialContainer.style.transform = `translateX(${newPosition}px)`;
+        }
+
+        function showNextCustomer() {
+            currentIndex = (currentIndex + 1) % customers.length;
+            slideTo(currentIndex);
+        }
+
+        // Automatically slide to the next customer every 5 seconds
+        setInterval(showNextCustomer, 5000);
+    });
+
+
+</script>
 </html>
