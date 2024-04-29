@@ -272,10 +272,21 @@ header {
 
 /* Testimonials */
 
+
+#testimonials {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1300px) {
+    #testimonials {
+        display: none;
+    }
+}
+
 #testimonial-container {
     height: 425px;
     width: 1120px;
-    max-width: 80%;
     padding: 60px;
     display: flex;
     border-radius: 24px;
