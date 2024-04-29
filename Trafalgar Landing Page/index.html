@@ -205,37 +205,15 @@
             
         </div>
         <div id="testimonial-controls">
-            <button>Prev</button>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <button>Next</button>
+            <button class="arrow-btn" id="prev-btn"><img src="./src/images/previous-arrow.png" alt="Previous Comment"></button>
+            <span class="page focus">•</span>
+            <span class="page">•</span>
+            <span class="page">•</span>
+            <span class="page">•</span>
+            <button class="arrow-btn" id="next-btn"><img src="./src/images/next-arrow.png" alt="Next Comment"></button>
         </div>
     </div>
 
 </body>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const testimonialContainer = document.getElementById('testimonial');
-        const customers = document.querySelectorAll('.customer');
-        const customerWidth = customers[0].clientWidth; // Assuming all customers have the same width
-        let currentIndex = 0;
-
-        function slideTo(index) {
-            const newPosition = -index * customerWidth;
-            testimonialContainer.style.transform = `translateX(${newPosition}px)`;
-        }
-
-        function showNextCustomer() {
-            currentIndex = (currentIndex + 1) % customers.length;
-            slideTo(currentIndex);
-        }
-
-      
-        setInterval(showNextCustomer, 5000);
-    });
-
-
-</script>
+<script defer src="./src/index.js"></script>
 </html>
