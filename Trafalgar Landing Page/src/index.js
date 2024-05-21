@@ -3,7 +3,7 @@ const customers = document.querySelectorAll('.customer');
 const pages = document.querySelectorAll('.page');
 
 const customerWidth = customers[0].clientWidth; // Assuming all customers have the same width
-const testimonialInterval = setInterval(showNextCustomer, 1000);
+const testimonialInterval = setInterval(showNextCustomer, 5000);
 let currentIndex = 0;
 
 function slideTo(index) {

@@ -403,3 +403,44 @@ header {
 .page.focus {
     opacity: 1;
 }
+
+
+/* ARTICLE Cards PART */
+
+#card-container {
+    display: flex;
+}
+
+.card {
+    width: 30%;
+    max-width: 350px;
+    margin-right: 35px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px rgb(245, 245, 245);
+}
+
+.card-text {
+    padding: 20px;
+}
+
+.card-header {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.card-info {
+    color: #7D7987;
+    font-weight: light;
+    font-size: 16px;
+    padding-top: 12px;
+    padding-bottom: 25px;
+}
+
+
+.card-link {
+    color: #4089ED;
+    font-size: 17px;
+    font-weight: 700;
+}
